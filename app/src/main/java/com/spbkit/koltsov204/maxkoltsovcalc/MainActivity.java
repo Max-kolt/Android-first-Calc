@@ -24,15 +24,54 @@ public class MainActivity extends AppCompatActivity {
         resultField = findViewById(R.id.resultNumber);
     }
 
-    public void Operation(View v) {
+    public void SimpleOperations(View v) {
+
+
+        String aTxt = firstField.getText().toString();
+
+        double a = 0, c = 0;
+
+        try {
+            a = Double.parseDouble(aTxt);
+        } catch (Exception e) {
+            resultField.setText(getString(R.string.InputError));
+            return;
+        }
+
+        if(v.getId() == R.id.btnCos){
+            c = Math.cos(a);
+        }
+        else if(v.getId() == R.id.btnLn && a>=0){
+            c = Math.log(a);
+        }
+        else if(v.getId() == R.id.btnSin){
+            c = Math.sin(a);
+        }
+        else if(v.getId() == R.id.btnTan){
+            c = Math.tan(a);
+        }
+        else if(v.getId() == R.id.btnSqrt && a>0){
+            c = Math.sqrt(a);
+        }
+        else{
+            resultField.setText(R.string.InputError);
+            return;
+        }
+
+        resultField.setText(String.valueOf(c));
+    }
+
+    public void OperationTwo(View v) {
         String aTxt = firstField.getText().toString();
         String bTxt = secondField.getText().toString();
 
-        double a, b, c = 0;
+        double a = 0, b = 0, c = 0;
+
 
         try {
             a = Double.parseDouble(aTxt);
             b = Double.parseDouble(bTxt);
+
         }
         catch(Exception e){
             resultField.setText(getString(R.string.InputError));
@@ -48,20 +87,20 @@ public class MainActivity extends AppCompatActivity {
         else if(v.getId() == R.id.btnMul){
             c = a * b;
         }
-        else if(v.getId() == R.id.btnMul){
-            c = a * b;
+        else if(v.getId() == R.id.btnCos){
+            c = Math.cos(a);
+        }
+        else if(v.getId() == R.id.btnPow){
+            c = Math.pow(a,b);
         }
         else if(v.getId() == R.id.btnDiv && b!=0){
             c = a / b;
         }
         else{
-            resultField.setText("Делить на ноль нельзя");
+            resultField.setText(R.string.InputError);
             return;
         }
         resultField.setText(String.valueOf(c));
-
-
-
     }
 
 }

@@ -87,9 +87,6 @@ public class MainActivity extends AppCompatActivity {
         else if(v.getId() == R.id.btnMul){
             c = a * b;
         }
-        else if(v.getId() == R.id.btnCos){
-            c = Math.cos(a);
-        }
         else if(v.getId() == R.id.btnPow){
             c = Math.pow(a,b);
         }

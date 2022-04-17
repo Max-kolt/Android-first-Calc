@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MaxKoltsovCalc</string>
+    <string name="a">A:</string>
+    <string name="b">B:</string>
+    <string name="result">Result:</string>
+    <string name="Add">Add</string>
+    <string name="Sub">Sub</string>
+    <string name="Div">Div</string>
+    <string name="Mul">Mul</string>
+    <string name="Cos">Cos</string>
+    <string name="Sin">Sin</string>
+    <string name="Tan">Tan</string>
+    <string name="Pow">Pow</string>
+    <string name="Sqrt">Sqrt</string>
+    <string name="Ln">Ln</string>
+    <string name="InputError">Input Error</string>
+</resources>
